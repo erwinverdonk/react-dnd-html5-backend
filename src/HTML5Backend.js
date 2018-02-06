@@ -302,14 +302,14 @@ export default class HTML5Backend {
 		// This is needed because the drag preview needs to be drawn or else it fires an 'mousemove' event
 		// immediately in some browsers.
 		setTimeout(
-			_ =>
+			(_:HTML5Backend) =>
 				_.window.addEventListener(
 					'mousemove',
-					this.endDragIfSourceWasRemovedFromDOM,
+					_.endDragIfSourceWasRemovedFromDOM,
 					true,
 				),
 			0,
-			[this],
+			this,
 		)
 	}
 
