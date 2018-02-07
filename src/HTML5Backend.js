@@ -305,7 +305,7 @@ export default class HTML5Backend {
 		this.mouseMoveTimeoutId = setTimeout(_ => {
 			_.mouseMoveTimeoutId = null;
 			return _.window.addEventListener('mousemove', _.endDragIfSourceWasRemovedFromDOM, true);
-		}, 0, this);
+		}, 1000, this);
 	}
 
 	clearCurrentDragSourceNode() {
